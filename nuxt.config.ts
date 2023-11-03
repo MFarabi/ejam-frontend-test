@@ -2,7 +2,7 @@ import vuetify from 'vite-plugin-vuetify';
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  css: ['vuetify/styles'],
+  css: ['vuetify/styles', '@/assets/styles/main.scss'],
 
   build: {
     transpile: ['vuetify'],
@@ -15,6 +15,15 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }));
       });
     },
+    'nuxt-icon',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          Manrope: true,
+        },
+      },
+    ],
   ],
 
   vite: {
